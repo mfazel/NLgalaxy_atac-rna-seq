@@ -1,0 +1,477 @@
+---
+# This is a sample file to be used as a reference for populating a list of
+# tools that you wish to install into Galaxy from a Tool Shed via the
+# `install_tool_shed_tools.py` script.
+#
+# For each tool you want to install, you must provide the following keys:
+#  * name: this is is the name of the tool to install
+#  * owner: owner of the Tool Shed repository from where the tools is being
+#           installed
+# Further, you need to provide **one** of the following two keys:
+#  * tool_panel_section_id: ID of the tool panel section where you want the
+#                           tool to be installed. The section ID can be found
+#                           in Galaxy's `shed_tool_conf.xml` config file. Note
+#                           that the specified section must exist in this file.
+#                           Otherwise, the tool will be installed outside any
+#                           section.
+#  * tool_panel_section_label: Display label of a tool panel section where
+#                              you want the tool to be installed. If it does not
+#                              exist, this section will be created on the target
+#                              Galaxy instance (note that this is different than
+#                              when using the ID).
+#                              Multi-word labels need to be placed in quotes.
+#                              Each label will have a corresponding ID created;
+#                              the ID will be an all lowercase version of the
+#                              label, with multiple words joined with
+#                              underscores (e.g., 'BED tools' -> 'bed_tools').
+#
+# Tou can also specify the following optional keys to further define the
+# installation properties:
+#  * tool_shed_url: the URL of the Tool Shed from where the tool should be
+#                   installed. (default: https://toolshed.g2.bx.psu.edu)
+#  * revisions: a list of revisions of the tool, all of which will attempt to
+#               be installed. (default: latest)
+#  * install_tool_dependencies: True or False - whether to install tool
+#                               dependencies or not. (default: True)
+#  * install_repository_dependencies: True or False - whether to install repo
+#                               dependencies or not. (default: True)
+
+api_key: admin
+galaxy_instance: http://localhost:8080
+install_resolver_dependencies: True
+install_tool_dependencies: True
+tool_shed_url: https://toolshed.g2.bx.psu.edu
+
+tools:
+#####
+#- name: package_pysam_0_7_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '0a5141bdf9d0'  # v0.5.7.1
+
+- name: ngsutils_bam_filter
+  owner: iuc
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '8187a729d9f4'  # v0.5.7.1
+#####
+
+#####
+#- name: package_samtools_1_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'f6ae3ba3f3c1'  # v2.0
+
+- name: samtools_sort
+  owner: devteam
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 'a430da4f04cd'  # v2.0
+#####
+
+#####
+#Repository package_pixman_0_32_4 revision 93cd8e03820c owned by devteam (prior install required)
+#Repository package_scipy_0_12 revision cfbbe183f8a7 owned by iuc
+#Repository package_fontconfig_2_11_1 revision d88d844df0cb owned by iuc (prior install required)
+#Repository package_cairo_1_12_14 revision cd2ed5717e38 owned by devteam (prior install required)
+#Repository package_numpy_1_7 revision 300877695495 owned by iuc
+#Repository package_freetype_2_5_2 revision a65217367e4a owned by devteam (prior install required)
+#Repository package_numpy_1_7 revision 300877695495 owned by iuc (prior install required)
+#Repository package_libpng_1_6_7 revision 588666932a32 owned by iuc (prior install required)
+#Repository package_freetype_2_5_2 revision 1e86d1cf79a4 owned by iuc (prior install required)
+#Repository package_zlib_1_2_8 revision 411985b46ae8 owned by iuc (prior install required)
+#Repository package_libpng_1_6_7 revision 588666932a32 owned by iuc (prior install required)
+#Repository package_readline_6_2 revision 5313ca2fbce6 owned by iuc (prior install required)
+#Repository package_macs2_2_1_0_20151222 revision e1370f7d5e2f owned by iuc
+#Repository package_r_3_1_2 revision 4d2fd1413b56 owned by iuc
+#Repository package_gnu_awk_4_1_0 revision f145f856ec57 owned by iuc
+#- name: package_r_3_0_1
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '59b82e6e0801'  #
+
+#- name: package_numpy_1_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '300877695495'  #
+
+#- name: package_atlas_3_10
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '98c017ec230d'  #
+
+#- name: package_scipy_0_12
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'cfbbe183f8a7'  #
+
+#- name: package_macs2_2_1_0
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '4d7ef54c3fa4'  #
+
+#- name: package_readline_6_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '5313ca2fbce6'  #
+
+#- name: package_gnu_awk_4_1_0
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'f145f856ec57'  #
+
+
+
+#- name: macs2_callpeak
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '56e104999978'  # v2.1.0.20151222.0 
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '56e104999978'  # v2.1.0.20151222.0   f5d67c722d67  56e104999978   bfe57d6e0c4c
+#####
+
+- name: bed_to_bigwig
+  owner: xuebing
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '4e9e1625dae3'  # v1.0.0
+
+- name: map_to_known_genes
+  owner: alenail
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '3f12a2b0af50'  # v0.1
+
+- name: pieplot_macs
+  owner: alenail
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '8dae9fdd2afe'  # v1.4 not 0.1
+
+#####
+- name: trimmomatic
+  owner: pjbriggs
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '14d05f2d511d'  # v0.36.0 2016-07-14
+#####
+
+#####
+#- name: package_samtools_1_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'f6ae3ba3f3c1'  #
+
+#- name: package_bowtie_2_2_6
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '0d9cd7487cc9'  #
+
+- name: bowtie2
+  owner: devteam
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '43d12513224b'  # v2.3.2.1 43d12513224b:R15     v2.3.2.2  8ccbdbe9a695:R16  a9d4f71dbfb0   019c2a81547a
+#####
+
+#####
+#- name: package_bowtie_2_2_5
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '30bd7eaeddbf'  #
+
+#- name: package_tophat_2_0_14
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'b13271391f95'  #
+
+- name: tophat2
+  owner: devteam
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '0849fa93eadb'  # v2.1.0 4eb3c3beb9c7:R7   16c4255042be R.7   0849fa93eadb:R9
+#####
+
+#####
+#- name: package_ez_setup_0_9
+  #owner: lparsons
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '10fd2e2a9f2f'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_imaging_1_1_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'd5f2627f4cfd'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_pysam_0_7_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '0a5141bdf9d0'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_matplotlib_1_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '48020985e28c'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_numpy_1_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '300877695495'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_libpng_1_6_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '588666932a32'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_numpy_1_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '300877695495'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_htseq_0_6
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'fbb72996807d'  # v0.6.1galaxy1 3b3601a2a7c7
+
+#- name: package_samtools_0_1_19
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '95d2c4aefb5f'  # v0.6.1galaxy1 3b3601a2a7c7
+
+- name: htseq_count
+  owner: lparsons
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 'a6dcb86af112'  # v0.6.1galaxy1 3b3601a2a7c7
+#####
+
+#####
+#- name: package_deseq2_1_8_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '623321e04b2d'  #
+
+#- name: package_fontconfig_2_11_1
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'd88d844df0cb'  #
+
+#- name: package_freetype_2_5_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '1e86d1cf79a4'  #
+
+#- name: package_libxml2_2_9_1
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '45b16a3ab504'  #
+
+#- name: package_pixman_0_32_6
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '06f701aa92e2'  #
+
+#- name: package_r_3_2_1
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'd9f7d84125b7'  #
+
+#- name: package_readline_6_3
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'ca1a9400d4e1'  #
+
+#- name: package_libpng_1_6_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '588666932a32'  #
+
+#- name: package_pixman_0_32_4
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '32ff063c4de8'  #
+
+#- name: package_freetype_2_5_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '1e86d1cf79a4'  #
+
+#- name: package_cairo_1_12_14
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '0a73735c3161'  #
+
+- name: deseq2
+  owner: iuc
+  tool_panel_section_label: "NL pipelines Tools"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - '8702e49e68b6'  # v2.1.8.3
+#####
+
+###### removed for new stable with reference container
+# - name: fastq_groomer
+  # owner: devteam
+  # tool_panel_section_label: "NL pipelines Tools"
+  # tool_shed_url: https://toolshed.g2.bx.psu.edu
+  # revisions:
+  # - 'e4d28c94242d'  # v1.0.4 e4d28c94242d:R1    71e5fa25b8a2
+
+# - name: data_manager_fetch_genome_dbkeys_all_fasta
+  # owner: devteam
+  # tool_panel_section_label: "NL pipelines Tools"
+  # tool_shed_url: https://toolshed.g2.bx.psu.edu
+  # revisions:
+  # - '776bb1b478a0'  # v
+
+# - name: data_manager_bowtie2_index_builder
+  # owner: devteam
+  # tool_panel_section_label: "NL pipelines Tools"
+  # tool_shed_url: https://toolshed.g2.bx.psu.edu
+  # revisions:
+  # - 'e87aeff2cf88'  # v
+
+
+
+
+
+
+######
+#- name: package_r_3_0_1
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '59b82e6e0801'  #
+
+#- name: package_numpy_1_7
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '300877695495'  #
+
+#- name: package_atlas_3_10
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '98c017ec230d'  #
+
+#- name: package_scipy_0_12
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'cfbbe183f8a7'  #
+
+#- name: package_macs2_2_1_0
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '4d7ef54c3fa4'  #
+
+#- name: package_readline_6_2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- '5313ca2fbce6'  #
+
+#- name: package_gnu_awk_4_1_0
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'f145f856ec57'  #
+
+#- name: macs2
+  #owner: iuc
+  #tool_panel_section_label: "NL pipelines Tools"
+  #tool_shed_url: https://toolshed.g2.bx.psu.edu
+  #revisions:
+  #- 'bfe57d6e0c4c'  # v2.1.0.20151222.0   f5d67c722d67  56e104999978   bfe57d6e0c4c
+######
