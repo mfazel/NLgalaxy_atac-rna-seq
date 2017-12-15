@@ -4,9 +4,9 @@
 #FROM quay.io/bgruening/galaxy-ngs-preprocessing:17.09
 
 #FROM bgruening/galaxy-stable
-FROM mbfazel/glxy_base4nl:stable
+FROM bgruening/galaxy-stable:16.07
 
-MAINTAINER Mehdi Fazel Najafabadi, mbfazel@gmail.com
+MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
 ENV GALAXY_CONFIG_BRAND="RNA-Seq"
 
